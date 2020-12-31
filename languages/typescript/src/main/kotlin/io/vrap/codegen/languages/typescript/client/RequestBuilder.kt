@@ -95,8 +95,8 @@ class RequestBuilder @Inject constructor(
                     """.trimMargin()
 
                     """
-                    |<${it.toTsComment()}>
                     |public ${it.getMethodName()}($args): ${it.toRequestBuilderName()} {
+                    |<${it.toTsComment()}>
                     |   return new ${it.toRequestBuilderName()}(
                     |         {
                     |            pathArgs: {
@@ -144,7 +144,7 @@ class RequestBuilder @Inject constructor(
 
                     val methodArgs = """ |
                             |methodArgs${if (argsAreOptional) "?" else ""}:{
-                            |   
+                            |
                             |   <$queryParamsArg>
                             |   <$bodies>
                             |   <${it.headersPartInMethodSigniture()}>
