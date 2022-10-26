@@ -30,7 +30,7 @@ class ApiRootFileProducer constructor(
             content = """|
                 |$pyGeneratedComment
                 |${type.imports("client")}
-                |from commercetools.client import BaseClient
+                |from commercetools.base_client import BaseClient
                 |
                 |
                 |class Client(BaseClient):
