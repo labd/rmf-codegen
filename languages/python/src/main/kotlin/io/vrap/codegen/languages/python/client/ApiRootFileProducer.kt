@@ -37,7 +37,7 @@ class ApiRootFileProducer constructor(
                 |
                 |    def __init__(self, *args, **kwargs):
                 |        kwargs.setdefault("url", "${api.baseUri?.template}")
-                |        super().__init__(self, **kwargs)
+                |        super().__init__(**kwargs)
                 |
                 |    <${type.subResources("self").escapeAll()}>
                 |
