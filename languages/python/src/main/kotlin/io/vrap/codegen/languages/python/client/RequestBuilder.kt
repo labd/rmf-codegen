@@ -205,7 +205,7 @@ class RequestBuilder constructor(
                         returnTypeOptional = true
                         """
                             |$stmt:
-                            |    return None
+                            |    raise self._client._create_exception(None, response)
                             """.trimMargin()
                     } else {
                         """
